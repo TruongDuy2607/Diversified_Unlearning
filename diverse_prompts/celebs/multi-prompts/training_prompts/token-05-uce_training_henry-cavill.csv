@@ -1,0 +1,6 @@
+id,prompt,keyword,context,target_concept
+1,Henry Cavill,Henry Cavill,a man,a man
+2,Henry Cavill,Henry Cavill,a human,a man
+3,Henry Cavill,Henry Cavill,a person,a man
+4,Henry Cavill,Henry Cavill,a actor,a man
+5,Henry Cavill,Henry Cavill,super star,a man

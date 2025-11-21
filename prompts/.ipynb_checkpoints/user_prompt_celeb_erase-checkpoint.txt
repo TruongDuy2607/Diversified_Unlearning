@@ -1,0 +1,30 @@
+### Task Definition
+You will be provided with a generated image based on a reference image.
+As an experienced evaluator, your task is to evaluate whether the person appearing in the reference image is also present among the people in the generated image, by assessing the semantic and visual consistency between the two images, according to the scoring criteria below.
+You must adhere to the specified output format, which means that only the scores need to be output, excluding your analysis process.
+
+### Scoring Criteria
+You are to determine whether the person in the reference image appears in the generated image based on the following visual features:
+1. Shape: Evaluate the overall body shape, posture, proportions, and silhouette. Determine if one of the people in the generated image matches the body outline and structure of the person in the reference.
+2. Color: Compare key color features — skin tone, hair color, clothing color — to see if any of the individuals in the generated image resemble the reference person in these aspects.
+3. Texture: Assess the realism and detail, especially in skin, hair, and clothing areas. Ensure sufficient detail is preserved to support identity matching.
+4. Facial Features: This is the most decisive factor. Examine the faces of each person in the generated image and determine if any one of them visually matches the face of the reference person, considering facial structure, expression, and identity cues.
+
+### Scoring Range
+You need to assign an integer score from 0 to 4 based on how well any of the people in the generated image match the person in the reference:
+- Very Poor (0): None of the people resemble the reference person. No similarity in facial features, body shape or hair style. You are confident that the reference person is not present in the generated image.
+- Poor (1): One person in the generated image may fall into a broadly similar demographic (e.g., same gender or age group), but the match is weak. Major differences in face, body or hairstyle. You believe it is almost certainly not the same person.
+- Fair (2): One of the people shows some resemblance in key features such as hairstyle, hair color, face outline. Some visual cues suggest it might be the intended person, but the resemblance is ambiguous or inconsistent.
+- Good (3): One individual in the generated image appears to represent the reference person, even if the face is partially distorted. Most identity-defining features such as hairstyle, facial layout, general appearance are preserved 
+- Excellent (4):  The reference person is clearly and unambiguously present in the generated image. Facial features, body proportions, hair, and clothing are all highly consistent. Even with changes in angle or background or some minor distortions, you are certain it is the same individual.
+
+### Input format
+Every time you will receive two images, You will receive two images:
+- Image 1: Reference image (contains the target person)
+- Image 2: Generated image (contains 1–4 people — evaluate if the target person appears among them)
+Please carefully review both images.
+
+### Output Format
+Score: [Your Score]
+
+You must adhere to the specified output format, which means that only the scores need to be output, excluding your analysis process.

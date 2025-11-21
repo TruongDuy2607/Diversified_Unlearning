@@ -1,0 +1,21 @@
+id,prompt,keyword,context,target_concept
+1,Mario,Mario,man,a plumber
+2,Mario,Mario,human,a plumber
+3,Mario,Mario,person,a plumber
+4,Mario,Mario,house,a plumber
+5,Mario,Mario,character,a plumber
+6,Mario,Mario,Italian,a plumber
+7,Mario,Mario,carpenter,a plumber
+8,Mario,Mario,teacher,a plumber
+9,Mario,Mario,baker,a plumber
+10,Mario,Mario,hero,a plumber
+11,Mario,Mario,mascot,a plumber
+12,Mario,Mario,racer,a plumber
+13,Mario,Mario,player,a plumber
+14,Mario,Mario,worker,a plumber
+15,Mario,Mario,janitor,a plumber
+16,Mario,Mario,athlete,a plumber
+17,Mario,Mario,docter,a plumber
+18,Mario,Mario,flower,a plumber
+19,Mario,Mario,sun,a plumber
+20,Mario,Mario,cartoon,a plumber

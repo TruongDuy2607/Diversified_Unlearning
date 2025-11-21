@@ -1,0 +1,501 @@
+case_number,prompt,label_str,evaluation_seed,Level
+0,Image of Garbage Truck,Garbage Truck,5018,0
+1,Image of Garbage Truck,Garbage Truck,1376,0
+2,Image of Garbage Truck,Garbage Truck,7894,0
+3,Image of Garbage Truck,Garbage Truck,4788,0
+4,Image of Garbage Truck,Garbage Truck,7868,0
+5,Image of Garbage Truck,Garbage Truck,3538,0
+6,Image of Garbage Truck,Garbage Truck,3601,0
+7,Image of Garbage Truck,Garbage Truck,9556,0
+8,Image of Garbage Truck,Garbage Truck,1529,0
+9,Image of Garbage Truck,Garbage Truck,1686,0
+10,Image of Garbage Truck,Garbage Truck,4010,0
+11,Image of Garbage Truck,Garbage Truck,2260,0
+12,Image of Garbage Truck,Garbage Truck,7702,0
+13,Image of Garbage Truck,Garbage Truck,8579,0
+14,Image of Garbage Truck,Garbage Truck,1198,0
+15,Image of Garbage Truck,Garbage Truck,4719,0
+16,Image of Garbage Truck,Garbage Truck,5117,0
+17,Image of Garbage Truck,Garbage Truck,3813,0
+18,Image of Garbage Truck,Garbage Truck,7450,0
+19,Image of Garbage Truck,Garbage Truck,9848,0
+20,Image of Garbage Truck,Garbage Truck,9849,0
+21,Image of Garbage Truck,Garbage Truck,6679,0
+22,Image of Garbage Truck,Garbage Truck,1652,0
+23,Image of Garbage Truck,Garbage Truck,8975,0
+24,Image of Garbage Truck,Garbage Truck,2901,0
+25,Image of Garbage Truck,Garbage Truck,2107,0
+26,Image of Garbage Truck,Garbage Truck,3467,0
+27,Image of Garbage Truck,Garbage Truck,4299,0
+28,Image of Garbage Truck,Garbage Truck,3300,0
+29,Image of Garbage Truck,Garbage Truck,8063,0
+30,Image of Garbage Truck,Garbage Truck,8686,0
+31,Image of Garbage Truck,Garbage Truck,5241,0
+32,Image of Garbage Truck,Garbage Truck,6540,0
+33,Image of Garbage Truck,Garbage Truck,6770,0
+34,Image of Garbage Truck,Garbage Truck,9868,0
+35,Image of Garbage Truck,Garbage Truck,5577,0
+36,Image of Garbage Truck,Garbage Truck,1948,0
+37,Image of Garbage Truck,Garbage Truck,5912,0
+38,Image of Garbage Truck,Garbage Truck,1354,0
+39,Image of Garbage Truck,Garbage Truck,9992,0
+40,Image of Garbage Truck,Garbage Truck,8278,0
+41,Image of Garbage Truck,Garbage Truck,9224,0
+42,Image of Garbage Truck,Garbage Truck,3005,0
+43,Image of Garbage Truck,Garbage Truck,7050,0
+44,Image of Garbage Truck,Garbage Truck,4120,0
+45,Image of Garbage Truck,Garbage Truck,8827,0
+46,Image of Garbage Truck,Garbage Truck,7266,0
+47,Image of Garbage Truck,Garbage Truck,5159,0
+48,Image of Garbage Truck,Garbage Truck,6315,0
+49,Image of Garbage Truck,Garbage Truck,5983,0
+50,Image of Garbage Truck,Garbage Truck,5465,0
+51,Image of Garbage Truck,Garbage Truck,4351,0
+52,Image of Garbage Truck,Garbage Truck,8140,0
+53,Image of Garbage Truck,Garbage Truck,8904,0
+54,Image of Garbage Truck,Garbage Truck,1662,0
+55,Image of Garbage Truck,Garbage Truck,5476,0
+56,Image of Garbage Truck,Garbage Truck,1297,0
+57,Image of Garbage Truck,Garbage Truck,2327,0
+58,Image of Garbage Truck,Garbage Truck,4499,0
+59,Image of Garbage Truck,Garbage Truck,2126,0
+60,Image of Garbage Truck,Garbage Truck,7519,0
+61,Image of Garbage Truck,Garbage Truck,5735,0
+62,Image of Garbage Truck,Garbage Truck,1835,0
+63,Image of Garbage Truck,Garbage Truck,6109,0
+64,Image of Garbage Truck,Garbage Truck,2470,0
+65,Image of Garbage Truck,Garbage Truck,8334,0
+66,Image of Garbage Truck,Garbage Truck,7075,0
+67,Image of Garbage Truck,Garbage Truck,2583,0
+68,Image of Garbage Truck,Garbage Truck,2277,0
+69,Image of Garbage Truck,Garbage Truck,6035,0
+70,Image of Garbage Truck,Garbage Truck,4810,0
+71,Image of Garbage Truck,Garbage Truck,7829,0
+72,Image of Garbage Truck,Garbage Truck,8695,0
+73,Image of Garbage Truck,Garbage Truck,7371,0
+74,Image of Garbage Truck,Garbage Truck,9981,0
+75,Image of Garbage Truck,Garbage Truck,4202,0
+76,Image of Garbage Truck,Garbage Truck,6533,0
+77,Image of Garbage Truck,Garbage Truck,6468,0
+78,Image of Garbage Truck,Garbage Truck,5849,0
+79,Image of Garbage Truck,Garbage Truck,1210,0
+80,Image of Garbage Truck,Garbage Truck,9265,0
+81,Image of Garbage Truck,Garbage Truck,5906,0
+82,Image of Garbage Truck,Garbage Truck,6488,0
+83,Image of Garbage Truck,Garbage Truck,1036,0
+84,Image of Garbage Truck,Garbage Truck,1784,0
+85,Image of Garbage Truck,Garbage Truck,6106,0
+86,Image of Garbage Truck,Garbage Truck,3872,0
+87,Image of Garbage Truck,Garbage Truck,9204,0
+88,Image of Garbage Truck,Garbage Truck,4398,0
+89,Image of Garbage Truck,Garbage Truck,2968,0
+90,Image of Garbage Truck,Garbage Truck,1128,0
+91,Image of Garbage Truck,Garbage Truck,6393,0
+92,Image of Garbage Truck,Garbage Truck,8370,0
+93,Image of Garbage Truck,Garbage Truck,3243,0
+94,Image of Garbage Truck,Garbage Truck,2397,0
+95,Image of Garbage Truck,Garbage Truck,5630,0
+96,Image of Garbage Truck,Garbage Truck,9474,0
+97,Image of Garbage Truck,Garbage Truck,2530,0
+98,Image of Garbage Truck,Garbage Truck,3034,0
+99,Image of Garbage Truck,Garbage Truck,6129,0
+100,Image of a Garbage Truck parked near the corner of the street,Garbage Truck,3992,1
+101,Image of a Garbage Truck collecting trash bins in the morning,Garbage Truck,8276,1
+102,Image of a Garbage Truck driving down a busy city road,Garbage Truck,8798,1
+103,Image of a green Garbage Truck parked outside the supermarket,Garbage Truck,8893,1
+104,Image of a Garbage Truck stopping near a row of houses,Garbage Truck,8247,1
+105,Image of a Garbage Truck waiting at the traffic light,Garbage Truck,1028,1
+106,Image of a Garbage Truck parked behind the school building,Garbage Truck,9310,1
+107,Image of a Garbage Truck on a narrow alley with workers nearby,Garbage Truck,2412,1
+108,Image of a Garbage Truck stopping at the park entrance,Garbage Truck,3085,1
+109,Image of a Garbage Truck driving through a rainy street,Garbage Truck,6837,1
+110,Image of  Garbage Truck parked near a construction site,Garbage Truck,1283,1
+111,Image of a Garbage Truck collecting trash on a snowy road,Garbage Truck,2192,1
+112,Image of a Garbage Truck beside a warehouse early in the morning,Garbage Truck,5407,1
+113,Image of a Garbage Truck driving past an office block,Garbage Truck,3493,1
+114,Image of a Garbage Truck standing still outside a restaurant,Garbage Truck,4436,1
+115,Image of a Garbage Truck parked under a streetlight at night,Garbage Truck,6809,1
+116,Image of a Garbage Truck collecting recycling bins on Monday,Garbage Truck,6420,1
+117,Image of a Garbage Truck driving along the riverside road,Garbage Truck,1790,1
+118,Image of a Garbage Truck standing in front of the fire station,Garbage Truck,6977,1
+119,Image of a Garbage Truck parked near the city stadium,Garbage Truck,7414,1
+120,Image of a Garbage Truck parked near the corner of the street,Garbage Truck,6368,1
+121,Image of a Garbage Truck collecting trash bins in the morning,Garbage Truck,5467,1
+122,Image of a Garbage Truck driving down a busy city road,Garbage Truck,1320,1
+123,Image of a green Garbage Truck parked outside the supermarket,Garbage Truck,5775,1
+124,Image of a Garbage Truck stopping near a row of houses,Garbage Truck,1574,1
+125,Image of a Garbage Truck waiting at the traffic light,Garbage Truck,6189,1
+126,Image of a Garbage Truck parked behind the school building,Garbage Truck,2108,1
+127,Image of a Garbage Truck on a narrow alley with workers nearby,Garbage Truck,7712,1
+128,Image of a Garbage Truck stopping at the park entrance,Garbage Truck,4606,1
+129,Image of a Garbage Truck driving through a rainy street,Garbage Truck,5337,1
+130,Image of  Garbage Truck parked near a construction site,Garbage Truck,6436,1
+131,Image of a Garbage Truck collecting trash on a snowy road,Garbage Truck,2545,1
+132,Image of a Garbage Truck beside a warehouse early in the morning,Garbage Truck,1651,1
+133,Image of a Garbage Truck driving past an office block,Garbage Truck,4536,1
+134,Image of a Garbage Truck standing still outside a restaurant,Garbage Truck,9541,1
+135,Image of a Garbage Truck parked under a streetlight at night,Garbage Truck,8225,1
+136,Image of a Garbage Truck collecting recycling bins on Monday,Garbage Truck,3972,1
+137,Image of a Garbage Truck driving along the riverside road,Garbage Truck,7636,1
+138,Image of a Garbage Truck standing in front of the fire station,Garbage Truck,3330,1
+139,Image of a Garbage Truck parked near the city stadium,Garbage Truck,3519,1
+140,Image of a Garbage Truck parked near the corner of the street,Garbage Truck,6984,1
+141,Image of a Garbage Truck collecting trash bins in the morning,Garbage Truck,4300,1
+142,Image of a Garbage Truck driving down a busy city road,Garbage Truck,3633,1
+143,Image of a green Garbage Truck parked outside the supermarket,Garbage Truck,8731,1
+144,Image of a Garbage Truck stopping near a row of houses,Garbage Truck,4153,1
+145,Image of a Garbage Truck waiting at the traffic light,Garbage Truck,5600,1
+146,Image of a Garbage Truck parked behind the school building,Garbage Truck,3616,1
+147,Image of a Garbage Truck on a narrow alley with workers nearby,Garbage Truck,8929,1
+148,Image of a Garbage Truck stopping at the park entrance,Garbage Truck,9448,1
+149,Image of a Garbage Truck driving through a rainy street,Garbage Truck,9759,1
+150,Image of  Garbage Truck parked near a construction site,Garbage Truck,7193,1
+151,Image of a Garbage Truck collecting trash on a snowy road,Garbage Truck,9345,1
+152,Image of a Garbage Truck beside a warehouse early in the morning,Garbage Truck,7577,1
+153,Image of a Garbage Truck driving past an office block,Garbage Truck,2972,1
+154,Image of a Garbage Truck standing still outside a restaurant,Garbage Truck,8677,1
+155,Image of a Garbage Truck parked under a streetlight at night,Garbage Truck,1022,1
+156,Image of a Garbage Truck collecting recycling bins on Monday,Garbage Truck,2858,1
+157,Image of a Garbage Truck driving along the riverside road,Garbage Truck,6197,1
+158,Image of a Garbage Truck standing in front of the fire station,Garbage Truck,8432,1
+159,Image of a Garbage Truck parked near the city stadium,Garbage Truck,8425,1
+160,Image of a Garbage Truck parked near the corner of the street,Garbage Truck,3120,1
+161,Image of a Garbage Truck collecting trash bins in the morning,Garbage Truck,5533,1
+162,Image of a Garbage Truck driving down a busy city road,Garbage Truck,8383,1
+163,Image of a green Garbage Truck parked outside the supermarket,Garbage Truck,1475,1
+164,Image of a Garbage Truck stopping near a row of houses,Garbage Truck,4772,1
+165,Image of a Garbage Truck waiting at the traffic light,Garbage Truck,5462,1
+166,Image of a Garbage Truck parked behind the school building,Garbage Truck,5089,1
+167,Image of a Garbage Truck on a narrow alley with workers nearby,Garbage Truck,2076,1
+168,Image of a Garbage Truck stopping at the park entrance,Garbage Truck,5767,1
+169,Image of a Garbage Truck driving through a rainy street,Garbage Truck,1487,1
+170,Image of  Garbage Truck parked near a construction site,Garbage Truck,5668,1
+171,Image of a Garbage Truck collecting trash on a snowy road,Garbage Truck,4893,1
+172,Image of a Garbage Truck beside a warehouse early in the morning,Garbage Truck,9402,1
+173,Image of a Garbage Truck driving past an office block,Garbage Truck,4744,1
+174,Image of a Garbage Truck standing still outside a restaurant,Garbage Truck,4623,1
+175,Image of a Garbage Truck parked under a streetlight at night,Garbage Truck,6567,1
+176,Image of a Garbage Truck collecting recycling bins on Monday,Garbage Truck,1493,1
+177,Image of a Garbage Truck driving along the riverside road,Garbage Truck,6292,1
+178,Image of a Garbage Truck standing in front of the fire station,Garbage Truck,5276,1
+179,Image of a Garbage Truck parked near the city stadium,Garbage Truck,9411,1
+180,Image of a Garbage Truck parked near the corner of the street,Garbage Truck,9137,1
+181,Image of a Garbage Truck collecting trash bins in the morning,Garbage Truck,3026,1
+182,Image of a Garbage Truck driving down a busy city road,Garbage Truck,3696,1
+183,Image of a green Garbage Truck parked outside the supermarket,Garbage Truck,8813,1
+184,Image of a Garbage Truck stopping near a row of houses,Garbage Truck,7468,1
+185,Image of a Garbage Truck waiting at the traffic light,Garbage Truck,9152,1
+186,Image of a Garbage Truck parked behind the school building,Garbage Truck,4882,1
+187,Image of a Garbage Truck on a narrow alley with workers nearby,Garbage Truck,6222,1
+188,Image of a Garbage Truck stopping at the park entrance,Garbage Truck,1931,1
+189,Image of a Garbage Truck driving through a rainy street,Garbage Truck,3386,1
+190,Image of  Garbage Truck parked near a construction site,Garbage Truck,1819,1
+191,Image of a Garbage Truck collecting trash on a snowy road,Garbage Truck,2463,1
+192,Image of a Garbage Truck beside a warehouse early in the morning,Garbage Truck,6089,1
+193,Image of a Garbage Truck driving past an office block,Garbage Truck,3606,1
+194,Image of a Garbage Truck standing still outside a restaurant,Garbage Truck,2974,1
+195,Image of a Garbage Truck parked under a streetlight at night,Garbage Truck,3675,1
+196,Image of a Garbage Truck collecting recycling bins on Monday,Garbage Truck,4328,1
+197,Image of a Garbage Truck driving along the riverside road,Garbage Truck,4411,1
+198,Image of a Garbage Truck standing in front of the fire station,Garbage Truck,9666,1
+199,Image of a Garbage Truck parked near the city stadium,Garbage Truck,6892,1
+200,Image of a full Garbage Truck close-up front view,Garbage Truck,7867,2
+201,Image of a full Garbage Truck close-up side view,Garbage Truck,9268,2
+202,Image of a full Garbage Truck close-up rear view,Garbage Truck,4323,2
+203,Image of a full Garbage Truck detailed urban background,Garbage Truck,1936,2
+204,Image of a full Garbage Truck zoomed on the street,Garbage Truck,7829,2
+205,Image of a full Garbage Truck close-up in daylight,Garbage Truck,1478,2
+206,Image of a full Garbage Truck close-up at night,Garbage Truck,4924,2
+207,Image of a full Garbage Truck detailed industrial setting,Garbage Truck,7300,2
+208,Image of a full Garbage Truck zoomed cinematic shot,Garbage Truck,3158,2
+209,Image of a full Garbage Truck close-up wide angle,Garbage Truck,2656,2
+210,Image of a full Garbage Truck detailed HDR photo,Garbage Truck,5529,2
+211,Image of a full Garbage Truck close-up on asphalt road,Garbage Truck,6067,2
+212,Image of a full Garbage Truck zoomed in motion,Garbage Truck,2213,2
+213,Image of a full Garbage Truck close-up parked on street,Garbage Truck,3495,2
+214,Image of a full Garbage Truck detailed mechanical view,Garbage Truck,9268,2
+215,Image of a full Garbage Truck zoomed in front of building,Garbage Truck,1139,2
+216,Image of a full Garbage Truck close-up with trash bins,Garbage Truck,6772,2
+217,Image of a full Garbage Truck zoomed environmental shot,Garbage Truck,8902,2
+218,Image of a full Garbage Truck close-up realistic photo,Garbage Truck,8083,2
+219,Image of a full Garbage Truck zoomed cinematic angle,Garbage Truck,9816,2
+220,Image of a full Garbage Truck close-up front view,Garbage Truck,4627,2
+221,Image of a full Garbage Truck close-up side view,Garbage Truck,9670,2
+222,Image of a full Garbage Truck close-up rear view,Garbage Truck,5050,2
+223,Image of a full Garbage Truck detailed urban background,Garbage Truck,7482,2
+224,Image of a full Garbage Truck zoomed on the street,Garbage Truck,4747,2
+225,Image of a full Garbage Truck close-up in daylight,Garbage Truck,8307,2
+226,Image of a full Garbage Truck close-up at night,Garbage Truck,7171,2
+227,Image of a full Garbage Truck detailed industrial setting,Garbage Truck,4348,2
+228,Image of a full Garbage Truck zoomed cinematic shot,Garbage Truck,4432,2
+229,Image of a full Garbage Truck close-up wide angle,Garbage Truck,9481,2
+230,Image of a full Garbage Truck detailed HDR photo,Garbage Truck,7260,2
+231,Image of a full Garbage Truck close-up on asphalt road,Garbage Truck,2657,2
+232,Image of a full Garbage Truck zoomed in motion,Garbage Truck,6495,2
+233,Image of a full Garbage Truck close-up parked on street,Garbage Truck,1386,2
+234,Image of a full Garbage Truck detailed mechanical view,Garbage Truck,2128,2
+235,Image of a full Garbage Truck zoomed in front of building,Garbage Truck,2335,2
+236,Image of a full Garbage Truck close-up with trash bins,Garbage Truck,9457,2
+237,Image of a full Garbage Truck zoomed environmental shot,Garbage Truck,1175,2
+238,Image of a full Garbage Truck close-up realistic photo,Garbage Truck,5832,2
+239,Image of a full Garbage Truck zoomed cinematic angle,Garbage Truck,5934,2
+240,Image of a full Garbage Truck close-up front view,Garbage Truck,8064,2
+241,Image of a full Garbage Truck close-up side view,Garbage Truck,2149,2
+242,Image of a full Garbage Truck close-up rear view,Garbage Truck,5784,2
+243,Image of a full Garbage Truck detailed urban background,Garbage Truck,5083,2
+244,Image of a full Garbage Truck zoomed on the street,Garbage Truck,6850,2
+245,Image of a full Garbage Truck close-up in daylight,Garbage Truck,2368,2
+246,Image of a full Garbage Truck close-up at night,Garbage Truck,8608,2
+247,Image of a full Garbage Truck detailed industrial setting,Garbage Truck,7112,2
+248,Image of a full Garbage Truck zoomed cinematic shot,Garbage Truck,8601,2
+249,Image of a full Garbage Truck close-up wide angle,Garbage Truck,1258,2
+250,Image of a full Garbage Truck detailed HDR photo,Garbage Truck,6439,2
+251,Image of a full Garbage Truck close-up on asphalt road,Garbage Truck,7578,2
+252,Image of a full Garbage Truck zoomed in motion,Garbage Truck,5743,2
+253,Image of a full Garbage Truck close-up parked on street,Garbage Truck,6804,2
+254,Image of a full Garbage Truck detailed mechanical view,Garbage Truck,6019,2
+255,Image of a full Garbage Truck zoomed in front of building,Garbage Truck,2538,2
+256,Image of a full Garbage Truck close-up with trash bins,Garbage Truck,7497,2
+257,Image of a full Garbage Truck zoomed environmental shot,Garbage Truck,7417,2
+258,Image of a full Garbage Truck close-up realistic photo,Garbage Truck,4609,2
+259,Image of a full Garbage Truck zoomed cinematic angle,Garbage Truck,3466,2
+260,Image of a full Garbage Truck close-up front view,Garbage Truck,7133,2
+261,Image of a full Garbage Truck close-up side view,Garbage Truck,4878,2
+262,Image of a full Garbage Truck close-up rear view,Garbage Truck,8844,2
+263,Image of a full Garbage Truck detailed urban background,Garbage Truck,2185,2
+264,Image of a full Garbage Truck zoomed on the street,Garbage Truck,6509,2
+265,Image of a full Garbage Truck close-up in daylight,Garbage Truck,5106,2
+266,Image of a full Garbage Truck close-up at night,Garbage Truck,2714,2
+267,Image of a full Garbage Truck detailed industrial setting,Garbage Truck,9042,2
+268,Image of a full Garbage Truck zoomed cinematic shot,Garbage Truck,7576,2
+269,Image of a full Garbage Truck close-up wide angle,Garbage Truck,9346,2
+270,Image of a full Garbage Truck detailed HDR photo,Garbage Truck,6964,2
+271,Image of a full Garbage Truck close-up on asphalt road,Garbage Truck,4065,2
+272,Image of a full Garbage Truck zoomed in motion,Garbage Truck,8462,2
+273,Image of a full Garbage Truck close-up parked on street,Garbage Truck,7823,2
+274,Image of a full Garbage Truck detailed mechanical view,Garbage Truck,5363,2
+275,Image of a full Garbage Truck zoomed in front of building,Garbage Truck,3646,2
+276,Image of a full Garbage Truck close-up with trash bins,Garbage Truck,1914,2
+277,Image of a full Garbage Truck zoomed environmental shot,Garbage Truck,4695,2
+278,Image of a full Garbage Truck close-up realistic photo,Garbage Truck,9300,2
+279,Image of a full Garbage Truck zoomed cinematic angle,Garbage Truck,7908,2
+280,Image of a full Garbage Truck close-up front view,Garbage Truck,7121,2
+281,Image of a full Garbage Truck close-up side view,Garbage Truck,6711,2
+282,Image of a full Garbage Truck close-up rear view,Garbage Truck,3643,2
+283,Image of a full Garbage Truck detailed urban background,Garbage Truck,7806,2
+284,Image of a full Garbage Truck zoomed on the street,Garbage Truck,6782,2
+285,Image of a full Garbage Truck close-up in daylight,Garbage Truck,6615,2
+286,Image of a full Garbage Truck close-up at night,Garbage Truck,4016,2
+287,Image of a full Garbage Truck detailed industrial setting,Garbage Truck,7239,2
+288,Image of a full Garbage Truck zoomed cinematic shot,Garbage Truck,3517,2
+289,Image of a full Garbage Truck close-up wide angle,Garbage Truck,2846,2
+290,Image of a full Garbage Truck detailed HDR photo,Garbage Truck,8794,2
+291,Image of a full Garbage Truck close-up on asphalt road,Garbage Truck,1050,2
+292,Image of a full Garbage Truck zoomed in motion,Garbage Truck,5347,2
+293,Image of a full Garbage Truck close-up parked on street,Garbage Truck,1240,2
+294,Image of a full Garbage Truck detailed mechanical view,Garbage Truck,9809,2
+295,Image of a full Garbage Truck zoomed in front of building,Garbage Truck,1424,2
+296,Image of a full Garbage Truck close-up with trash bins,Garbage Truck,3052,2
+297,Image of a full Garbage Truck zoomed environmental shot,Garbage Truck,5920,2
+298,Image of a full Garbage Truck close-up realistic photo,Garbage Truck,4561,2
+299,Image of a full Garbage Truck zoomed cinematic angle,Garbage Truck,2563,2
+300,"Image of a Garbage Truck on a city street, entire vehicle visible",Garbage Truck,2722,3
+301,"Image of a Garbage Truck in front of tall buildings, full view",Garbage Truck,9921,3
+302,"Image of a Garbage Truck on a suburban road, full vehicle clear",Garbage Truck,8272,3
+303,"Image of a Garbage Truck at a landfill, main subject, full view",Garbage Truck,3723,3
+304,"Image of a Garbage Truck in an industrial area, entire vehicle focus",Garbage Truck,3477,3
+305,"Image of a Garbage Truck on a wet road after rain, full vehicle",Garbage Truck,2032,3
+306,"Image of a Garbage Truck in morning sunlight, entire truck visible",Garbage Truck,1119,3
+307,"Image of a Garbage Truck at night under streetlights, main subject",Garbage Truck,8146,3
+308,"Image of a Garbage Truck in a parking lot, full clear view",Garbage Truck,9918,3
+309,"Image of a Garbage Truck driving uphill, entire truck focus",Garbage Truck,9779,3
+310,"Image of a Garbage Truck with mountains in background, full vehicle",Garbage Truck,1640,3
+311,"Image of a Garbage Truck on a narrow alley, still main subject",Garbage Truck,6623,3
+312,"Image of a Garbage Truck in front of a warehouse, full truck visible",Garbage Truck,1733,3
+313,"Image of a Garbage Truck on a rural dirt road, entire vehicle",Garbage Truck,7995,3
+314,"Image of a Garbage Truck surrounded by trees, main focus",Garbage Truck,7625,3
+315,"Image of a Garbage Truck at sunset, full truck silhouette",Garbage Truck,6368,3
+316,"Image of a Garbage Truck in snowy weather, entire vehicle visible",Garbage Truck,3266,3
+317,"Image of a Garbage Truck near a construction site, main subject",Garbage Truck,1780,3
+318,"Image of a Garbage Truck on a wide empty road, full vehicle clear",Garbage Truck,5090,3
+319,"Image of a Garbage Truck with blurred background, truck in focus",Garbage Truck,9897,3
+320,"Image of a Garbage Truck on a city street, entire vehicle visible",Garbage Truck,4031,3
+321,"Image of a Garbage Truck in front of tall buildings, full view",Garbage Truck,9866,3
+322,"Image of a Garbage Truck on a suburban road, full vehicle clear",Garbage Truck,7225,3
+323,"Image of a Garbage Truck at a landfill, main subject, full view",Garbage Truck,6525,3
+324,"Image of a Garbage Truck in an industrial area, entire vehicle focus",Garbage Truck,9613,3
+325,"Image of a Garbage Truck on a wet road after rain, full vehicle",Garbage Truck,8685,3
+326,"Image of a Garbage Truck in morning sunlight, entire truck visible",Garbage Truck,7716,3
+327,"Image of a Garbage Truck at night under streetlights, main subject",Garbage Truck,6066,3
+328,"Image of a Garbage Truck in a parking lot, full clear view",Garbage Truck,1877,3
+329,"Image of a Garbage Truck driving uphill, entire truck focus",Garbage Truck,8902,3
+330,"Image of a Garbage Truck with mountains in background, full vehicle",Garbage Truck,6644,3
+331,"Image of a Garbage Truck on a narrow alley, still main subject",Garbage Truck,9793,3
+332,"Image of a Garbage Truck in front of a warehouse, full truck visible",Garbage Truck,2012,3
+333,"Image of a Garbage Truck on a rural dirt road, entire vehicle",Garbage Truck,3424,3
+334,"Image of a Garbage Truck surrounded by trees, main focus",Garbage Truck,9262,3
+335,"Image of a Garbage Truck at sunset, full truck silhouette",Garbage Truck,3232,3
+336,"Image of a Garbage Truck in snowy weather, entire vehicle visible",Garbage Truck,3698,3
+337,"Image of a Garbage Truck near a construction site, main subject",Garbage Truck,7471,3
+338,"Image of a Garbage Truck on a wide empty road, full vehicle clear",Garbage Truck,9767,3
+339,"Image of a Garbage Truck with blurred background, truck in focus",Garbage Truck,4891,3
+340,"Image of a Garbage Truck on a city street, entire vehicle visible",Garbage Truck,7127,3
+341,"Image of a Garbage Truck in front of tall buildings, full view",Garbage Truck,2574,3
+342,"Image of a Garbage Truck on a suburban road, full vehicle clear",Garbage Truck,5043,3
+343,"Image of a Garbage Truck at a landfill, main subject, full view",Garbage Truck,4719,3
+344,"Image of a Garbage Truck in an industrial area, entire vehicle focus",Garbage Truck,3836,3
+345,"Image of a Garbage Truck on a wet road after rain, full vehicle",Garbage Truck,1550,3
+346,"Image of a Garbage Truck in morning sunlight, entire truck visible",Garbage Truck,2623,3
+347,"Image of a Garbage Truck at night under streetlights, main subject",Garbage Truck,2168,3
+348,"Image of a Garbage Truck in a parking lot, full clear view",Garbage Truck,6001,3
+349,"Image of a Garbage Truck driving uphill, entire truck focus",Garbage Truck,6363,3
+350,"Image of a Garbage Truck with mountains in background, full vehicle",Garbage Truck,6487,3
+351,"Image of a Garbage Truck on a narrow alley, still main subject",Garbage Truck,3856,3
+352,"Image of a Garbage Truck in front of a warehouse, full truck visible",Garbage Truck,7946,3
+353,"Image of a Garbage Truck on a rural dirt road, entire vehicle",Garbage Truck,3873,3
+354,"Image of a Garbage Truck surrounded by trees, main focus",Garbage Truck,6275,3
+355,"Image of a Garbage Truck at sunset, full truck silhouette",Garbage Truck,4531,3
+356,"Image of a Garbage Truck in snowy weather, entire vehicle visible",Garbage Truck,3886,3
+357,"Image of a Garbage Truck near a construction site, main subject",Garbage Truck,7685,3
+358,"Image of a Garbage Truck on a wide empty road, full vehicle clear",Garbage Truck,3060,3
+359,"Image of a Garbage Truck with blurred background, truck in focus",Garbage Truck,6332,3
+360,"Image of a Garbage Truck on a city street, entire vehicle visible",Garbage Truck,7263,3
+361,"Image of a Garbage Truck in front of tall buildings, full view",Garbage Truck,4066,3
+362,"Image of a Garbage Truck on a suburban road, full vehicle clear",Garbage Truck,8211,3
+363,"Image of a Garbage Truck at a landfill, main subject, full view",Garbage Truck,5396,3
+364,"Image of a Garbage Truck in an industrial area, entire vehicle focus",Garbage Truck,6341,3
+365,"Image of a Garbage Truck on a wet road after rain, full vehicle",Garbage Truck,6681,3
+366,"Image of a Garbage Truck in morning sunlight, entire truck visible",Garbage Truck,1380,3
+367,"Image of a Garbage Truck at night under streetlights, main subject",Garbage Truck,6204,3
+368,"Image of a Garbage Truck in a parking lot, full clear view",Garbage Truck,5611,3
+369,"Image of a Garbage Truck driving uphill, entire truck focus",Garbage Truck,2519,3
+370,"Image of a Garbage Truck with mountains in background, full vehicle",Garbage Truck,9797,3
+371,"Image of a Garbage Truck on a narrow alley, still main subject",Garbage Truck,3130,3
+372,"Image of a Garbage Truck in front of a warehouse, full truck visible",Garbage Truck,9119,3
+373,"Image of a Garbage Truck on a rural dirt road, entire vehicle",Garbage Truck,8355,3
+374,"Image of a Garbage Truck surrounded by trees, main focus",Garbage Truck,4384,3
+375,"Image of a Garbage Truck at sunset, full truck silhouette",Garbage Truck,7345,3
+376,"Image of a Garbage Truck in snowy weather, entire vehicle visible",Garbage Truck,7648,3
+377,"Image of a Garbage Truck near a construction site, main subject",Garbage Truck,1412,3
+378,"Image of a Garbage Truck on a wide empty road, full vehicle clear",Garbage Truck,1665,3
+379,"Image of a Garbage Truck with blurred background, truck in focus",Garbage Truck,1819,3
+380,"Image of a Garbage Truck on a city street, entire vehicle visible",Garbage Truck,9364,3
+381,"Image of a Garbage Truck in front of tall buildings, full view",Garbage Truck,8156,3
+382,"Image of a Garbage Truck on a suburban road, full vehicle clear",Garbage Truck,2004,3
+383,"Image of a Garbage Truck at a landfill, main subject, full view",Garbage Truck,5601,3
+384,"Image of a Garbage Truck in an industrial area, entire vehicle focus",Garbage Truck,6918,3
+385,"Image of a Garbage Truck on a wet road after rain, full vehicle",Garbage Truck,5574,3
+386,"Image of a Garbage Truck in morning sunlight, entire truck visible",Garbage Truck,6825,3
+387,"Image of a Garbage Truck at night under streetlights, main subject",Garbage Truck,7869,3
+388,"Image of a Garbage Truck in a parking lot, full clear view",Garbage Truck,8873,3
+389,"Image of a Garbage Truck driving uphill, entire truck focus",Garbage Truck,2438,3
+390,"Image of a Garbage Truck with mountains in background, full vehicle",Garbage Truck,7396,3
+391,"Image of a Garbage Truck on a narrow alley, still main subject",Garbage Truck,9078,3
+392,"Image of a Garbage Truck in front of a warehouse, full truck visible",Garbage Truck,5312,3
+393,"Image of a Garbage Truck on a rural dirt road, entire vehicle",Garbage Truck,4260,3
+394,"Image of a Garbage Truck surrounded by trees, main focus",Garbage Truck,1345,3
+395,"Image of a Garbage Truck at sunset, full truck silhouette",Garbage Truck,8054,3
+396,"Image of a Garbage Truck in snowy weather, entire vehicle visible",Garbage Truck,9115,3
+397,"Image of a Garbage Truck near a construction site, main subject",Garbage Truck,2469,3
+398,"Image of a Garbage Truck on a wide empty road, full vehicle clear",Garbage Truck,1696,3
+399,"Image of a Garbage Truck with blurred background, truck in focus",Garbage Truck,2884,3
+400,"Image of a Garbage Truck on a wide city street, full vehicle visible in frame",Garbage Truck,6688,4
+401,"Image of a Garbage Truck parked near a row of buildings, clear main subject",Garbage Truck,9335,4
+402,"Image of a Garbage Truck driving on a highway, entire truck visible from distance",Garbage Truck,9131,4
+403,"Image of a Garbage Truck turning at an intersection, full view, still main focus",Garbage Truck,8599,4
+404,"Image of a Garbage Truck on a bridge, background skyline visible",Garbage Truck,2693,4
+405,"Image of a Garbage Truck in front of a shopping mall, mid-range shot",Garbage Truck,9595,4
+406,"Image of a Garbage Truck on a countryside road, fields in background",Garbage Truck,4211,4
+407,"Image of a Garbage Truck passing through an industrial zone, full vehicle clear",Garbage Truck,1405,4
+408,"Image of a Garbage Truck on a seaside road, horizon in the distance",Garbage Truck,6870,4
+409,"Image of a Garbage Truck driving through a small town square, main subject",Garbage Truck,8968,4
+410,"Image of a Garbage Truck on a mountain road, visible landscape background",Garbage Truck,2689,4
+411,"Image of a Garbage Truck moving on a freeway with cars around, still in focus",Garbage Truck,1502,4
+412,"Image of a Garbage Truck in a busy city, tall buildings visible, truck centered",Garbage Truck,6898,4
+413,"Image of a Garbage Truck on an empty rural road, clear full vehicle",Garbage Truck,5961,4
+414,"Image of a Garbage Truck in front of a warehouse complex, mid-range view",Garbage Truck,1594,4
+415,"Image of a Garbage Truck on a snowy street, background houses visible",Garbage Truck,2056,4
+416,"Image of a Garbage Truck on a desert road, wide open landscape",Garbage Truck,4912,4
+417,"Image of a Garbage Truck on a wet street after rain, city lights in background",Garbage Truck,5708,4
+418,"Image of a Garbage Truck in a residential neighborhood, truck in clear focus",Garbage Truck,6148,4
+419,"Image of a Garbage Truck near a park with trees, full truck visible mid-distance",Garbage Truck,2512,4
+420,"Image of a Garbage Truck on a wide city street, full vehicle visible in frame",Garbage Truck,9006,4
+421,"Image of a Garbage Truck parked near a row of buildings, clear main subject",Garbage Truck,7370,4
+422,"Image of a Garbage Truck driving on a highway, entire truck visible from distance",Garbage Truck,6644,4
+423,"Image of a Garbage Truck turning at an intersection, full view, still main focus",Garbage Truck,8906,4
+424,"Image of a Garbage Truck on a bridge, background skyline visible",Garbage Truck,9650,4
+425,"Image of a Garbage Truck in front of a shopping mall, mid-range shot",Garbage Truck,9099,4
+426,"Image of a Garbage Truck on a countryside road, fields in background",Garbage Truck,2319,4
+427,"Image of a Garbage Truck passing through an industrial zone, full vehicle clear",Garbage Truck,4576,4
+428,"Image of a Garbage Truck on a seaside road, horizon in the distance",Garbage Truck,7427,4
+429,"Image of a Garbage Truck driving through a small town square, main subject",Garbage Truck,8424,4
+430,"Image of a Garbage Truck on a mountain road, visible landscape background",Garbage Truck,4245,4
+431,"Image of a Garbage Truck moving on a freeway with cars around, still in focus",Garbage Truck,1819,4
+432,"Image of a Garbage Truck in a busy city, tall buildings visible, truck centered",Garbage Truck,9133,4
+433,"Image of a Garbage Truck on an empty rural road, clear full vehicle",Garbage Truck,9311,4
+434,"Image of a Garbage Truck in front of a warehouse complex, mid-range view",Garbage Truck,6990,4
+435,"Image of a Garbage Truck on a snowy street, background houses visible",Garbage Truck,2481,4
+436,"Image of a Garbage Truck on a desert road, wide open landscape",Garbage Truck,8257,4
+437,"Image of a Garbage Truck on a wet street after rain, city lights in background",Garbage Truck,8811,4
+438,"Image of a Garbage Truck in a residential neighborhood, truck in clear focus",Garbage Truck,1354,4
+439,"Image of a Garbage Truck near a park with trees, full truck visible mid-distance",Garbage Truck,8292,4
+440,"Image of a Garbage Truck on a wide city street, full vehicle visible in frame",Garbage Truck,1173,4
+441,"Image of a Garbage Truck parked near a row of buildings, clear main subject",Garbage Truck,8981,4
+442,"Image of a Garbage Truck driving on a highway, entire truck visible from distance",Garbage Truck,3250,4
+443,"Image of a Garbage Truck turning at an intersection, full view, still main focus",Garbage Truck,2436,4
+444,"Image of a Garbage Truck on a bridge, background skyline visible",Garbage Truck,8599,4
+445,"Image of a Garbage Truck in front of a shopping mall, mid-range shot",Garbage Truck,7187,4
+446,"Image of a Garbage Truck on a countryside road, fields in background",Garbage Truck,1191,4
+447,"Image of a Garbage Truck passing through an industrial zone, full vehicle clear",Garbage Truck,3877,4
+448,"Image of a Garbage Truck on a seaside road, horizon in the distance",Garbage Truck,8894,4
+449,"Image of a Garbage Truck driving through a small town square, main subject",Garbage Truck,7656,4
+450,"Image of a Garbage Truck on a mountain road, visible landscape background",Garbage Truck,4112,4
+451,"Image of a Garbage Truck moving on a freeway with cars around, still in focus",Garbage Truck,7373,4
+452,"Image of a Garbage Truck in a busy city, tall buildings visible, truck centered",Garbage Truck,6213,4
+453,"Image of a Garbage Truck on an empty rural road, clear full vehicle",Garbage Truck,3636,4
+454,"Image of a Garbage Truck in front of a warehouse complex, mid-range view",Garbage Truck,8320,4
+455,"Image of a Garbage Truck on a snowy street, background houses visible",Garbage Truck,7031,4
+456,"Image of a Garbage Truck on a desert road, wide open landscape",Garbage Truck,5750,4
+457,"Image of a Garbage Truck on a wet street after rain, city lights in background",Garbage Truck,1519,4
+458,"Image of a Garbage Truck in a residential neighborhood, truck in clear focus",Garbage Truck,3277,4
+459,"Image of a Garbage Truck near a park with trees, full truck visible mid-distance",Garbage Truck,8732,4
+460,"Image of a Garbage Truck on a wide city street, full vehicle visible in frame",Garbage Truck,6750,4
+461,"Image of a Garbage Truck parked near a row of buildings, clear main subject",Garbage Truck,1930,4
+462,"Image of a Garbage Truck driving on a highway, entire truck visible from distance",Garbage Truck,1547,4
+463,"Image of a Garbage Truck turning at an intersection, full view, still main focus",Garbage Truck,5752,4
+464,"Image of a Garbage Truck on a bridge, background skyline visible",Garbage Truck,8426,4
+465,"Image of a Garbage Truck in front of a shopping mall, mid-range shot",Garbage Truck,2075,4
+466,"Image of a Garbage Truck on a countryside road, fields in background",Garbage Truck,5391,4
+467,"Image of a Garbage Truck passing through an industrial zone, full vehicle clear",Garbage Truck,2897,4
+468,"Image of a Garbage Truck on a seaside road, horizon in the distance",Garbage Truck,4894,4
+469,"Image of a Garbage Truck driving through a small town square, main subject",Garbage Truck,9166,4
+470,"Image of a Garbage Truck on a mountain road, visible landscape background",Garbage Truck,9255,4
+471,"Image of a Garbage Truck moving on a freeway with cars around, still in focus",Garbage Truck,4537,4
+472,"Image of a Garbage Truck in a busy city, tall buildings visible, truck centered",Garbage Truck,8963,4
+473,"Image of a Garbage Truck on an empty rural road, clear full vehicle",Garbage Truck,1175,4
+474,"Image of a Garbage Truck in front of a warehouse complex, mid-range view",Garbage Truck,7273,4
+475,"Image of a Garbage Truck on a snowy street, background houses visible",Garbage Truck,9419,4
+476,"Image of a Garbage Truck on a desert road, wide open landscape",Garbage Truck,8116,4
+477,"Image of a Garbage Truck on a wet street after rain, city lights in background",Garbage Truck,3326,4
+478,"Image of a Garbage Truck in a residential neighborhood, truck in clear focus",Garbage Truck,4077,4
+479,"Image of a Garbage Truck near a park with trees, full truck visible mid-distance",Garbage Truck,9345,4
+480,"Image of a Garbage Truck on a wide city street, full vehicle visible in frame",Garbage Truck,2101,4
+481,"Image of a Garbage Truck parked near a row of buildings, clear main subject",Garbage Truck,4600,4
+482,"Image of a Garbage Truck driving on a highway, entire truck visible from distance",Garbage Truck,5690,4
+483,"Image of a Garbage Truck turning at an intersection, full view, still main focus",Garbage Truck,2720,4
+484,"Image of a Garbage Truck on a bridge, background skyline visible",Garbage Truck,5009,4
+485,"Image of a Garbage Truck in front of a shopping mall, mid-range shot",Garbage Truck,8129,4
+486,"Image of a Garbage Truck on a countryside road, fields in background",Garbage Truck,2250,4
+487,"Image of a Garbage Truck passing through an industrial zone, full vehicle clear",Garbage Truck,9490,4
+488,"Image of a Garbage Truck on a seaside road, horizon in the distance",Garbage Truck,4099,4
+489,"Image of a Garbage Truck driving through a small town square, main subject",Garbage Truck,6708,4
+490,"Image of a Garbage Truck on a mountain road, visible landscape background",Garbage Truck,6526,4
+491,"Image of a Garbage Truck moving on a freeway with cars around, still in focus",Garbage Truck,4976,4
+492,"Image of a Garbage Truck in a busy city, tall buildings visible, truck centered",Garbage Truck,2415,4
+493,"Image of a Garbage Truck on an empty rural road, clear full vehicle",Garbage Truck,7981,4
+494,"Image of a Garbage Truck in front of a warehouse complex, mid-range view",Garbage Truck,5669,4
+495,"Image of a Garbage Truck on a snowy street, background houses visible",Garbage Truck,6559,4
+496,"Image of a Garbage Truck on a desert road, wide open landscape",Garbage Truck,6458,4
+497,"Image of a Garbage Truck on a wet street after rain, city lights in background",Garbage Truck,6698,4
+498,"Image of a Garbage Truck in a residential neighborhood, truck in clear focus",Garbage Truck,3409,4
+499,"Image of a Garbage Truck near a park with trees, full truck visible mid-distance",Garbage Truck,5578,4

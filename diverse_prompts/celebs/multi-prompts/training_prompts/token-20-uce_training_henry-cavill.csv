@@ -1,0 +1,21 @@
+id,prompt,keyword,context,target_concept
+1,Henry Cavill,Henry Cavill,a man,a man
+2,Henry Cavill,Henry Cavill,a human,a man
+3,Henry Cavill,Henry Cavill,a person,a man
+4,Henry Cavill,Henry Cavill,a actor,a man
+5,Henry Cavill,Henry Cavill,super star,a man
+6,Henry Cavill,Henry Cavill,a celebrity,a man
+7,Henry Cavill,Henry Cavill,a performer,a man
+8,Henry Cavill,Henry Cavill,a male,a man
+9,Henry Cavill,Henry Cavill,a entertainer,a man
+10,Henry Cavill,Henry Cavill,a model,a man
+11,Henry Cavill,Henry Cavill,a spokesman,a man
+12,Henry Cavill,Henry Cavill,an influencer,a man
+13,Henry Cavill,Henry Cavill,an athlete,a man
+14,Henry Cavill,Henry Cavill,a gentleman,a man
+15,Henry Cavill,Henry Cavill,an adult,a man
+16,Henry Cavill,Henry Cavill,an individual,a man
+17,Henry Cavill,Henry Cavill,a leader,a man
+18,Henry Cavill,Henry Cavill,a hero ,a man
+19,Henry Cavill,Henry Cavill,a dreamboat,a man
+20,Henry Cavill,Henry Cavill,a warrior,a man

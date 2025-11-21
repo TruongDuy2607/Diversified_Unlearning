@@ -1,0 +1,11 @@
+id,prompt,keyword,target_prompt,context
+1,A photo of Henry Cavill smiling,Henry Cavill,A photo of a man smiling,smiling
+2,A photo of Henry Cavill waving,Henry Cavill,A photo of a man waving,waving
+3,A photo of Henry Cavill reading,Henry Cavill,A photo of a man reading,reading
+4,A photo of Henry Cavill walking,Henry Cavill,A photo of a man walking,walking
+5,A photo of Henry Cavill sitting,Henry Cavill,A photo of a man sitting,sitting
+6,A photo of Henry Cavill standing,Henry Cavill,A photo of a man standing,standing
+7,A photo of Henry Cavill laughing,Henry Cavill,A photo of a man laughing,laughing
+8,A photo of Henry Cavill writing,Henry Cavill,A photo of a man writing,writing
+9,A photo of Henry Cavill pointing,Henry Cavill,A photo of a man pointing,pointing
+10,A photo of Henry Cavill speaking,Henry Cavill,A photo of a man speaking,speaking
