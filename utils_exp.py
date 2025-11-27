@@ -107,33 +107,6 @@ def get_prompt(prompt):
     if prompt == 'nudity':
         prompt = "nudity"
         preserved = ' '
-
-    if prompt == 'nudity_with_person':
-        prompt = "nudity"
-        preserved = 'person'
-
-    if prompt == "artifact":
-        prompt = "ugly, tiling, poorly drawn hands, poorly drawn feet, poorly drawn face, out of frame, mutation, mutated, extra limbs, extra legs, extra arms, disfigured, deformed, cross-eye, body out of frame, blurry, bad art, bad anatomy, blurred, text, watermark, grainy"
-    
-    if prompt == 'imagenette':
-        prompt = ['Cassette Player', 'Chain Saw', 'Church', 'Gas Pump', 'Tench', 'Garbage Truck', 'English Springer', 'Golf Ball', 'parachute', 'French Horn']
-        prompt = 'Cassette Player, Chain Saw, Church, Gas Pump, Tench, Garbage Truck, English Springer, Golf Ball, parachute, French Horn'
-    
-    if prompt == 'imagenette_small':
-        prompt = 'Cassette Player, Church, Garbage Truck, parachute, French Horn'
-        preserved = 'Chain Saw, Gas Pump, Tench, English Springer, Golf Ball'
-
-    if prompt == 'imagenette_v2':
-        prompt = 'Chain Saw, Gas Pump, Tench, English Springer, Golf Ball'
-        preserved = 'Cassette Player, Church, Garbage Truck, parachute, French Horn'
-    
-    if prompt == 'imagenette_v3':
-        prompt = 'Cassette Player, Chain Saw, Church, Gas Pump, Tench'
-        preserved = 'Garbage Truck, English Springer, Golf Ball, parachute, French Horn'
-    
-    if prompt == 'imagenette_v4':
-        prompt = 'Garbage Truck, English Springer, Golf Ball, parachute, French Horn'
-        preserved = 'Cassette Player, Chain Saw, Church, Gas Pump, Tench'
     
     if prompt == 'cassette player':
         prompt = 'Cassette Player'
@@ -141,38 +114,6 @@ def get_prompt(prompt):
 
     if prompt == 'garbage truck':
         prompt = 'Garbage Truck'
-        preserved = ' '
-
-    if prompt == 'garbage_truck_with_lexus':
-        prompt = 'Garbage Truck'
-        preserved = 'lexus'
-
-    if prompt == 'garbage_truck_with_road':
-        prompt = 'Garbage Truck'
-        preserved = 'road'
-
-    if prompt == 'imagenette_v1_wo':
-        prompt = 'Cassette Player, Church, Garbage Truck, parachute, French Horn'
-        preserved = ' '
-
-    if prompt == 'imagenette_v2_wo':
-        prompt = 'Chain Saw, Gas Pump, Tench, English Springer, Golf Ball'
-        preserved = ' '
-    
-    if prompt == 'imagenette_v3_wo':
-        prompt = 'Cassette Player, Chain Saw, Church, Gas Pump, Tench'
-        preserved = ' '
-    
-    if prompt == 'imagenette_v4_wo':
-        prompt = 'Garbage Truck, English Springer, Golf Ball, parachute, French Horn'
-        preserved = ' '
-
-    if prompt == 'taylor swift':
-        prompt = 'Taylor Swift'
-        preserved = ' '
-    
-    if prompt == 'gun':
-        prompt = 'gun'
         preserved = ' '
     
     if prompt == 'margot robbie':
@@ -190,11 +131,7 @@ def get_prompt(prompt):
     if prompt == 'mario':
         prompt = 'Mario'
         preserved = 'plumber'
-        
-    if prompt == 'netfive':
-        prompt = 'English Springer, Clumber Spaniel, English Setter, Blenheim Spaniel, Border Collie, Garbage Truck, Moving Van, Fire Engine, Ambulance, School Bus, French Horn, Bassoon, Trombone, Oboe, Saxophone, Church, Monastery, Bell Cote, Dome, Library, Cassette Player, Polaroid Camera, Loudspeaker, Typewriter Keyboard, Projector'
-        preserved = ' '
-        
+                
     if prompt == '10-celebs':
         prompt = 'Margot Robbie, Henry Cavill, Angelina Jolie, Brad Pitt, Bill Gates, Mark Zuckerberg, Johnny Depp, Natalie Portman, Tom Hiddleston, Elon Musk'
         preserved = 'woman, man, woman, man, man, man, man, woman, man, man'
