@@ -9,7 +9,8 @@ import numpy as np
 from pathlib import Path
 import matplotlib.pyplot as plt
 import einops
-
+import sys
+sys.path.append(os.path.abspath(os.path.join(__file__, "..", "..", "..")))
 from ldm.models.diffusion.ddim import DDIMSampler
 from ldm.util import instantiate_from_config
 import random
@@ -64,6 +65,7 @@ def get_diverse_prompts(csv_path, objects_mode=False):
             contexts = [""] * len(prompts)
     
     return prompts, keywords, contexts
+
 ###########################
 
 # Util Functions
@@ -113,7 +115,7 @@ def sample_model(model, sampler, c, h, w, ddim_steps, scale, ddim_eta, start_cod
         return samples_ddim, inters
     return samples_ddim
 
-def train_age_diverse_new(prompt, train_method, start_guidance, negative_guidance, iterations, lr, config_path, ckpt_path, diffusers_config_path, devices, seperator=None, image_size=512, ddim_steps=50, args=None):
+def train_age_diverse(prompt, train_method, start_guidance, negative_guidance, iterations, lr, config_path, ckpt_path, diffusers_config_path, devices, prompts, setting_name, seperator=None, image_size=512, ddim_steps=50, args=None):
     '''
     Function to train diffusion models to erase concepts from model weights using Diversified-AGE
     
@@ -160,8 +162,7 @@ def train_age_diverse_new(prompt, train_method, start_guidance, negative_guidanc
     word_print = prompt.replace(' ','')
 
     # Load diverse prompts from CSV
-    csv_path = args.diverse_prompts_csv
-    diverse_prompts, diverse_keywords, diverse_contexts = get_diverse_prompts(csv_path, objects_mode=args.objects)
+    diverse_prompts, diverse_keywords, diverse_contexts = get_diverse_prompts(csv_path=prompts, objects_mode=args.objects)
     
     # If mixing keywords per-iteration, we still need the full df for sampling later
     # Otherwise, filter by current prompt (keyword)
@@ -271,7 +272,7 @@ def train_age_diverse_new(prompt, train_method, start_guidance, negative_guidanc
     criteria = torch.nn.MSELoss()
     history_dict = {}
 
-    name = f'age-kelly-mckernan-diverse'
+    name = f'age-diverse-{setting_name}'
     models_path = args.models_path
     os.makedirs(f'evaluation_folder/{name}', exist_ok=True)
     os.makedirs(f'invest_folder/{name}', exist_ok=True)
@@ -592,6 +593,7 @@ def save_history(losses, name, word_print, models_path):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description = 'Finetuning stable diffusion model to erase concepts using Diversified-AGE')
     parser.add_argument('--prompt', help='prompt corresponding to concept to erase', type=str, required=True)
+    parser.add_argument('--prompt_path', help='path to CSV file with diverse prompts', type=str, required=True)
     parser.add_argument('--train_method', help='method of training', type=str, required=True)
     parser.add_argument('--start_guidance', help='guidance of start image used to train', type=float, required=False, default=3)
     parser.add_argument('--negative_guidance', help='guidance of negative training used to train', type=float, required=False, default=1)
@@ -607,7 +609,6 @@ if __name__ == '__main__':
     parser.add_argument('--info', help='info to add to model name', type=str, required=False, default='')
     parser.add_argument('--save_freq', help='frequency to save data, per iteration', type=int, required=False, default=10)
     parser.add_argument('--models_path', help='method of prompting', type=str, required=True, default='models')
-    parser.add_argument('--diverse_prompts_csv', help='path to CSV file with diverse prompts', type=str, required=False, default='diverse_prompts/1_mario_training_prompt.csv')
     parser.add_argument('--erase_all_keywords', action='store_true', help='erase all unique keywords in the diverse CSV', required=False, default=False)
     parser.add_argument('--max_keywords', type=int, help='maximum number of keywords to erase (when erase_all_keywords)', required=False, default=10)
     parser.add_argument('--mix_keywords', action='store_true', help='randomly mix concepts: each iteration samples a random keyword from CSV', required=False, default=False)
@@ -626,10 +627,11 @@ if __name__ == '__main__':
     parser.add_argument('--pgd_num_steps', help='number of step to optimize adversarial concepts', type=int, required=False, default=2)
     parser.add_argument('--lamda', help='lambda for the loss function', type=float, required=False, default=1)
     parser.add_argument('--objects', action='store_true', help='use objects mode: extract context from prompt and combine token+context embeddings', required=False, default=False)
-
+    parser.add_argument('--name', help='Name of the setting', type=str, required=False, default='celeb')
     args = parser.parse_args()
     
     prompt = args.prompt
+    prompt_path = args.prompt_path
     train_method = args.train_method
     start_guidance = args.start_guidance
     negative_guidance = args.negative_guidance
@@ -642,17 +644,18 @@ if __name__ == '__main__':
     seperator = args.seperator
     image_size = args.image_size
     ddim_steps = args.ddim_steps
+    name = args.name
 
     if args.erase_all_keywords:
         # iterate over unique keywords from the CSV (up to max_keywords)
         import pandas as _pd
-        df_all = _pd.read_csv(args.diverse_prompts_csv)
+        df_all = _pd.read_csv(prompt_path)
         unique_keywords = [kw for kw in df_all['keyword'].dropna().unique().tolist()]
         if args.max_keywords is not None and args.max_keywords > 0:
             unique_keywords = unique_keywords[:args.max_keywords]
         print(f"Erasing {len(unique_keywords)} concepts: {unique_keywords}")
         for kw in unique_keywords:
             print(f"\n===== Training erase for concept: {kw} =====")
-            train_age_diverse_new(prompt=kw, train_method=train_method, start_guidance=start_guidance, negative_guidance=negative_guidance, iterations=iterations, lr=lr, config_path=config_path, ckpt_path=ckpt_path, diffusers_config_path=diffusers_config_path, devices=devices, seperator=seperator, image_size=image_size, ddim_steps=ddim_steps, args=args)
+            train_age_diverse(prompt=kw, train_method=train_method, start_guidance=start_guidance, negative_guidance=negative_guidance, iterations=iterations, lr=lr, config_path=config_path, ckpt_path=ckpt_path, diffusers_config_path=diffusers_config_path, devices=devices, prompts=prompt_path, setting_name=name, seperator=seperator, image_size=image_size, ddim_steps=ddim_steps, args=args)
     else:
-        train_age_diverse_new(prompt=prompt, train_method=train_method, start_guidance=start_guidance, negative_guidance=negative_guidance, iterations=iterations, lr=lr, config_path=config_path, ckpt_path=ckpt_path, diffusers_config_path=diffusers_config_path, devices=devices, seperator=seperator, image_size=image_size, ddim_steps=ddim_steps, args=args)
+        train_age_diverse(prompt=prompt, train_method=train_method, start_guidance=start_guidance, negative_guidance=negative_guidance, iterations=iterations, lr=lr, config_path=config_path, ckpt_path=ckpt_path, diffusers_config_path=diffusers_config_path, devices=devices, prompts=prompt_path, setting_name=name, seperator=seperator, image_size=image_size, ddim_steps=ddim_steps, args=args)

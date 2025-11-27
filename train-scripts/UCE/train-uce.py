@@ -13,7 +13,8 @@ import abc
 import copy
 from functools import reduce
 import operator
-
+import sys
+sys.path.append(os.path.abspath(os.path.join(__file__, "..", "..", "..")))
 import clip
 from utils_exp import get_prompt
 
@@ -333,6 +334,7 @@ if __name__ == '__main__':
     parser.add_argument('--concept_type', help='type of concept being erased', type=str, required=True)
     parser.add_argument('--add_prompts', help='option to add additional prompts', type=bool, required=False, default=False)
     parser.add_argument('--info', help='info to add to model name', type=str, required=False, default='')
+    parser.add_argument('--name', type=str, required=False, default='uce')
 
     args = parser.parse_args()
     technique = args.technique
@@ -344,6 +346,7 @@ if __name__ == '__main__':
     # preserve_concepts = args.preserve_concepts
     preserve_number = args.preserve_number
     concept_type = args.concept_type
+    model_name = args.name
     print_text=''
 
     concepts = args.prompt.split(',')
@@ -460,9 +463,9 @@ if __name__ == '__main__':
     
     os.makedirs('models', exist_ok=True)
     os.makedirs('info', exist_ok=True)
-    os.makedirs(f'models/uce-10-celebs')
+    os.makedirs(f'models/{model_name}')
 
-    torch.save(ldm_stable.unet.state_dict(), f'models/uce-10-celebs/uce-10-celebs.pt')
+    torch.save(ldm_stable.unet.state_dict(), f'models/{model_name}/{model_name}.pt')
     
     with open(f'info/uce-erased-{print_text}.txt', 'w') as fp:
         json.dump(concepts,fp)

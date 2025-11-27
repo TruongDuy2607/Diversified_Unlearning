@@ -9,7 +9,8 @@ import numpy as np
 from pathlib import Path
 import matplotlib.pyplot as plt
 import einops
-
+import sys
+sys.path.append(os.path.abspath(os.path.join(__file__, "..", "..", "..")))
 from ldm.models.diffusion.ddim import DDIMSampler
 from ldm.util import instantiate_from_config
 import random
@@ -28,8 +29,8 @@ from gen_embedding_matrix import learn_k_means_from_input_embedding, learn_k_mea
 import pandas as pd
 
 
-def get_to_be_erased_prompt_with_context(word):
-    df = pd.read_csv('diverse_prompts/characters/training_prompts/1_mario_training_prompt.csv')
+def get_to_be_erased_prompt_with_context(word, prompt_path):
+    df = pd.read_csv(prompt_path)
     # Prefer exact keyword match; fallback to contains; final fallback to random
     if 'keyword' in df.columns:
         sub = df[df['keyword'].astype(str) == str(word)]
@@ -93,7 +94,7 @@ def sample_model(model, sampler, c, h, w, ddim_steps, scale, ddim_eta, start_cod
     return samples_ddim
 
 
-def train(prompt, train_method, start_guidance, negative_guidance, iterations, lr, config_path, ckpt_path, diffusers_config_path, devices, seperator=None, image_size=512, ddim_steps=50, args=None):
+def train(prompt, train_method, start_guidance, negative_guidance, iterations, lr, config_path, ckpt_path, diffusers_config_path, devices, prompts, setting_name, seperator=None, image_size=512, ddim_steps=50, args=None):
     '''
     Context-aware training script implementing L1/L2/L3 with context:
     - L1: Mapping (C_e + C_c) -> (C_r + C_c)
@@ -218,7 +219,7 @@ def train(prompt, train_method, start_guidance, negative_guidance, iterations, l
     criteria = torch.nn.MSELoss()
     history_dict = {}
 
-    name = f'AP-diverse-new'
+    name = f'ap-diverse-{setting_name}'
     models_path = args.models_path
     os.makedirs(f'evaluation_folder/{name}', exist_ok=True)
     os.makedirs(f'invest_folder/{name}', exist_ok=True)
@@ -317,7 +318,7 @@ def train(prompt, train_method, start_guidance, negative_guidance, iterations, l
         opt_one_hot.zero_grad()
 
         # Sampling a row and extracting context for the chosen word
-        to_be_erased_prompt, target_prompt, context_str = get_to_be_erased_prompt_with_context(word)
+        to_be_erased_prompt, target_prompt, context_str = get_to_be_erased_prompt_with_context(word, prompts)
 
         # get text embeddings for conditional prompts (prompts already include context from CSV)
         emb_n_ctx = model.get_learned_conditioning([to_be_erased_prompt])  # (C_e + C_c)
@@ -406,7 +407,7 @@ def train(prompt, train_method, start_guidance, negative_guidance, iterations, l
             with torch.no_grad():
                 for ew in erased_words:
                     # Fetch a context for evaluation for each word
-                    _, _, ctx_eval = get_to_be_erased_prompt_with_context(ew)
+                    _, _, ctx_eval = get_to_be_erased_prompt_with_context(ew, prompts)
                     pres_set_eval = preserved_dict[ew]
                     pres_mat_eval = build_preserved_matrix_with_context(pres_set_eval, ctx_eval)
                     selector_eval = gumbel_softmax(one_hot_dict[ew])
@@ -468,6 +469,7 @@ def save_history(losses, name, word_print, models_path):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Finetuning stable diffusion model to erase concepts (context-aware)')
     parser.add_argument('--prompt', help='prompt corresponding to concept to erase', type=str, required=True)
+    parser.add_argument('--prompt_path', help='directory to prompt csv file', type=str, required=True)
     parser.add_argument('--train_method', help='method of training', type=str, required=True)
     parser.add_argument('--start_guidance', help='guidance of start image used to train', type=float, required=False, default=3)
     parser.add_argument('--negative_guidance', help='guidance of negative training used to train', type=float, required=False, default=1)
@@ -495,10 +497,12 @@ if __name__ == '__main__':
     parser.add_argument('--ignore_special_tokens', help='ignore special tokens in the embedding matrix', type=bool, required=False, default=True)
     parser.add_argument('--vocab', help='vocab', type=str, required=False, default='EN3K')
     parser.add_argument('--pgd_num_steps', help='number of step to optimize adversarial concepts', type=int, required=False, default=2)
+    parser.add_argument('--name', help='Name of the setting', type=str, required=False, defalt='celeb')
 
     args = parser.parse_args()
 
     prompt = args.prompt
+    prompt_path = args.prompt_path
     train_method = args.train_method
     start_guidance = args.start_guidance
     negative_guidance = args.negative_guidance
@@ -511,6 +515,7 @@ if __name__ == '__main__':
     seperator = args.seperator
     image_size = args.image_size
     ddim_steps = args.ddim_steps
+    name = args.name
 
     train(
         prompt=prompt,
@@ -523,6 +528,8 @@ if __name__ == '__main__':
         ckpt_path=ckpt_path,
         diffusers_config_path=diffusers_config_path,
         devices=devices,
+        prompts=prompt_path,
+        setting_name=name,
         seperator=seperator,
         image_size=image_size,
         ddim_steps=ddim_steps,

@@ -12,7 +12,8 @@ from transformers.modeling_attn_mask_utils import _create_4d_causal_attention_ma
 from transformers.modeling_outputs import BaseModelOutputWithPooling
 import copy
 import ast
-
+import sys
+sys.path.append(os.path.abspath(os.path.join(__file__, "..", "..", "..")))
 from transformers import CLIPTokenizer, CLIPTextModel
 tokenizer = CLIPTokenizer.from_pretrained("openai/clip-vit-large-patch14")
 text_model = CLIPTextModel.from_pretrained("openai/clip-vit-large-patch14")
@@ -346,10 +347,12 @@ if __name__ == '__main__':
     parser.add_argument('--concept_type', help='type of concept being erased', type=str, default='')
     parser.add_argument('--add_prompts', help='option to add additional prompts', type=bool, required=False, default=False)
     parser.add_argument('--info', help='info to add to model name', type=str, required=False, default='')
+    parser.add_argument('--name', type=str, required=False, default='uce-diverse')
     parser.add_argument('--level', type=str, required=False, default="")
 
     args = parser.parse_args()
     level=args.level
+    model_name = args.name
     technique = args.technique
     device = f'cuda:{args.device}'
     preserve_scale = args.preserve_scale
@@ -428,6 +431,6 @@ if __name__ == '__main__':
     
     os.makedirs('models', exist_ok=True)
     os.makedirs('info', exist_ok=True)
-    os.makedirs(f'models/uce-{level}', exist_ok=True)
+    os.makedirs(f'models/{model_name}-{level}', exist_ok=True)
 
-    torch.save(ldm_stable.unet.state_dict(), f'models/uce-{level}/uce-{level}.pt')
+    torch.save(ldm_stable.unet.state_dict(), f'models/{model_name}-{level}/{model_name}-{level}.pt')

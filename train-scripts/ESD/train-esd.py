@@ -8,7 +8,8 @@ from einops import rearrange
 import numpy as np
 from pathlib import Path
 import matplotlib.pyplot as plt
-
+import sys
+sys.path.append(os.path.abspath(os.path.join(__file__, "..", "..", "..")))
 from ldm.models.diffusion.ddim import DDIMSampler
 from ldm.util import instantiate_from_config
 import random

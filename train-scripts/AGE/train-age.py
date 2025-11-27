@@ -9,7 +9,8 @@ import numpy as np
 from pathlib import Path
 import matplotlib.pyplot as plt
 import einops
-
+import sys
+sys.path.append(os.path.abspath(os.path.join(__file__, "..", "..", "..")))
 from ldm.models.diffusion.ddim import DDIMSampler
 from ldm.util import instantiate_from_config
 import random
@@ -129,7 +130,7 @@ def save_to_dict(var, name, dict):
 
 
 
-def train_age(prompt, train_method, start_guidance, negative_guidance, iterations, lr, config_path, ckpt_path, diffusers_config_path, devices, seperator=None, image_size=512, ddim_steps=50, args=None):
+def train_age(prompt, train_method, start_guidance, negative_guidance, iterations, lr, config_path, ckpt_path, diffusers_config_path, devices, setting_name, seperator=None, image_size=512, ddim_steps=50, args=None):
     '''
     Function to train diffusion models to erase concepts from model weights
 
@@ -257,7 +258,7 @@ def train_age(prompt, train_method, start_guidance, negative_guidance, iteration
     criteria = torch.nn.MSELoss()
     history_dict = {}
 
-    name = f'age-5-objects-imagenet'
+    name = f'age-{setting_name}'
     models_path = args.models_path
     os.makedirs(f'evaluation_folder/{name}', exist_ok=True)
     os.makedirs(f'invest_folder/{name}', exist_ok=True)
@@ -532,6 +533,7 @@ if __name__ == '__main__':
     parser.add_argument('--vocab', help='vocab', type=str, required=False, default='EN3K')
     parser.add_argument('--pgd_num_steps', help='number of step to optimize adversarial concepts', type=int, required=False, default=2)
     parser.add_argument('--lamda', help='lambda for the loss function', type=float, required=False, default=1)
+    parser.add_argument('--name', help='Name of the setting', type=str, required=False, defalt='celeb')
 
     args = parser.parse_args()
     
@@ -548,5 +550,6 @@ if __name__ == '__main__':
     seperator = args.seperator
     image_size = args.image_size
     ddim_steps = args.ddim_steps
+    name = args.name
 
-    train_age(prompt=prompt, train_method=train_method, start_guidance=start_guidance, negative_guidance=negative_guidance, iterations=iterations, lr=lr, config_path=config_path, ckpt_path=ckpt_path, diffusers_config_path=diffusers_config_path, devices=devices, seperator=seperator, image_size=image_size, ddim_steps=ddim_steps, args=args)
+    train_age(prompt=prompt, train_method=train_method, start_guidance=start_guidance, negative_guidance=negative_guidance, iterations=iterations, lr=lr, config_path=config_path, ckpt_path=ckpt_path, diffusers_config_path=diffusers_config_path, devices=devices, setting_name=name, seperator=seperator, image_size=image_size, ddim_steps=ddim_steps, args=args)
