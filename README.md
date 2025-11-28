@@ -35,11 +35,11 @@ pip install -r requirements.txt
 
  **For baseline ESD**
  ```bash
- CUDA_VISIBLE_DEVICES=0 python3 train-scripts/ESD/train-esd.py --train_method "xattn" --ckpt_path "models/erase/sd-v1-4-full-ema.ckpt" --diffusers_config_path "models/erase/config.json" --prompt "henry cavill" --config_path "configs/stable-diffusion/v1-inference.yaml"
+ CUDA_VISIBLE_DEVICES=0 python3 train-scripts/ESD/train-esd.py --train_method "xattn" --prompt "henry cavill"
  ```
  **For integrate Diversified Unlearning to ESD**
  ```bash
- CUDA_VISIBLE_DEVICES=0 python3 train-scripts/ESD/train-esd-diverse.py --prompt_csv "diverse_prompts/celebs/multi-level/training_prompts/level1_henry-cavill.csv" --seperator "," --train_method "xattn" --ckpt_path "models/erase/sd-v1-4-full-ema.ckpt" --diffusers_config_path "models/erase/config.json" --prompt "henry cavill" --config_path "configs/stable-diffusion/v1-inference.yaml" --level "level-1"
+ CUDA_VISIBLE_DEVICES=0 python3 train-scripts/ESD/train-esd-diverse.py --prompt_csv "diverse_prompts/celebs/multi-level/training_prompts/level1_henry-cavill.csv" --seperator "," --train_method "xattn" --prompt "henry cavill" --level "level-1"
  ```
 
  The implementation for other baseline methods (UCE, AP, AGE) follows the same pattern. For detailed commands and configurations, please refer to [run.sh](run.sh).
