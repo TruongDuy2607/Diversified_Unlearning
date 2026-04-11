@@ -4,14 +4,29 @@
 
 ## [Conference] A concept is more than a word: Diversified Unlearning in Text-to-Image Diffusion models
 
+</div>
+
+## The complete rebuttal
+
+<p align="center">
+	<img src="assets/rebuttal.png" alt="Main figure" style="width:100%;" />
+</p>
+
+
+### Dear Reviewer, kindly refer to the attached [KDD26___Distributional_Unlearning_Rebuttal.pdf](assets/KDD26___Distributional_Unlearning_Rebuttal.pdf) for our complete responses to all your comments.
+
+<br>
+<br>
+
 <p align="center">
 	<img src="assets/main-figure.png" alt="Main figure" style="width:100%;" />
 </p>
-</div>
 
 > ### A concept is more than a word: Diversified Unlearning in Text-to-Image Diffusion models
 
 > Concept unlearning has emerged as a promising direction for reducing the risks of harmful content generation in text-to-image diffusion models by selectively erasing undesirable concepts from a model’s parameters. Existing approaches typically rely on keywords to identify the target concept. However, we show that this keyword-based formulation is inherently limited: concepts are multi-dimensional, can be expressed in diverse textual forms, and often overlap with related concepts in the latent space, making keyword-only unlearning brittle and prone to over-forgetting. To address this limitation, we propose **Diversified Unlearning**, a distributional framework that represents a concept through a set of contextually diverse prompts rather than a single keyword. This richer representation enables more precise and robust unlearning. Through extensive experiments across multiple benchmarks and state-of-the-art baselines, we demonstrate that Diversified Unlearning consistently achieves stronger erasure, better retention of unrelated concepts, and improved robustness against adversarial recovery attacks
+
+
 
 ## Enviroment setups
 ```bash
