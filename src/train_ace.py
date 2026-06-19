@@ -257,7 +257,7 @@ def train_esd(prompt,
     model = StableDiffusionPipeline.from_pretrained(model_path,
                                                     torch_dtype=torch.float32,
                                                     safety_checker=None,
-                                                    local_files_only=True, ).to(devices[1])
+                                                    local_files_only=True, ).to(devices[0])
 
     # MODEL TRAINING SETUP
 
@@ -592,7 +592,7 @@ def train_esd(prompt,
                 for j in range(len(data)):
                     if is_sc_clip:
                         sc_clip_tem = sc_clip[0][data[j]]
-                        clip_scale = sc_clip_tem / own_clip
+                        clip_scale = 1 #sc_clip_tem / own_clip
                         surrogate_guidance += clip_scale * (e_prior_ori[j] - e_0)
                     else:
                         surrogate_guidance += e_prior_ori[j] - e_0

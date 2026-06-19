@@ -14,7 +14,7 @@ from tqdm import tqdm
 import torch
 import matplotlib.pyplot as plt
 import train_util
-from models.ace import ACENetwork, ACELayer
+from models.ace import ACENetwork, ACELayer, ACECrossAttnNetwork
 from typing import List
 import torch.nn.functional as F
 from generate_images_lora import get_images
@@ -203,7 +203,10 @@ def train_esd(prompts,
               concept=None,
               target_prompts=None):
     '''
-    Function to train diffusion models to erase concepts from model weights
+    Function to train diffusion models to erase concepts from model weights.
+
+    This is the cross-attention-only variant: LoRA is injected exclusively into
+    the cross-attention (attn2) layers via ``ACECrossAttnNetwork``.
 
     Parameters
     ----------
@@ -275,7 +278,8 @@ def train_esd(prompts,
     model.unet.requires_grad_(False)
     model.unet.eval()
     lora_alpha = 1.0
-    network = ACENetwork(
+    # NOTE: cross-attention-only LoRA network (attn2 layers only).
+    network = ACECrossAttnNetwork(
         model.unet,
         rank=lora_rank,
         multiplier=1.0,
@@ -320,13 +324,15 @@ def train_esd(prompts,
     else:
         is_tensor_path = False
         tensor_dict = None
+    # Marker so cross-attention-only checkpoints never collide with the full-LoRA ones.
+    attn_tag = "attn2"
     if with_prior_preservation:
         anchor_dataset = AnchorsDataset(prompt_path=anchor_prompt_path, concept=words)
         print(anchor_prompt_path)
-        name = f'ACE_lora_{word_print}-sc_{surrogate_concept_print}-ng_{negative_guidance_scale}-iter_{iterations}-lr_{lr}-lora-prior_{anchor_batch_size}_tr_null_{is_train_null}_nc_{no_cond}_no_cer_sur_{no_certain_sur}_tensor_{is_tensor_path}_nw_{null_weight}_pl_{pl_weight}_sg_new_{surrogate_guidance_scale}_is_sc_clip_{is_sc_clip}'
+        name = f'ACE_lora_{word_print}-sc_{surrogate_concept_print}-ng_{negative_guidance_scale}-iter_{iterations}-lr_{lr}-lora-prior_{anchor_batch_size}_tr_null_{is_train_null}_nc_{no_cond}_no_cer_sur_{no_certain_sur}_tensor_{is_tensor_path}_nw_{null_weight}_pl_{pl_weight}_sg_new_{surrogate_guidance_scale}_is_sc_clip_{is_sc_clip}_{attn_tag}'
     else:
         anchor_dataset = None
-        name = f'ACE_lora_{word_print}-sc_{surrogate_concept_print}-ng_{negative_guidance_scale}-iter_{iterations}-lr_{lr}-lora_tr_null_{is_train_null}_nc_{no_cond}_no_cer_sur_{no_certain_sur}_tensor_{is_tensor_path}_nw_{null_weight}_pl_{pl_weight}_sg_new_{surrogate_guidance_scale}_is_sc_clip_{is_sc_clip}'
+        name = f'ACE_lora_{word_print}-sc_{surrogate_concept_print}-ng_{negative_guidance_scale}-iter_{iterations}-lr_{lr}-lora_tr_null_{is_train_null}_nc_{no_cond}_no_cer_sur_{no_certain_sur}_tensor_{is_tensor_path}_nw_{null_weight}_pl_{pl_weight}_sg_new_{surrogate_guidance_scale}_is_sc_clip_{is_sc_clip}_{attn_tag}'
     print(name)
 
     # TRAINING CODE
@@ -830,7 +836,8 @@ def main(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         prog='TrainESD',
-        description='Finetuning stable diffusion model to erase concepts using ESD method')
+        description='Finetuning stable diffusion model to erase concepts using ESD method '
+                    '(cross-attention-only LoRA variant: LoRA injected into attn2 layers only)')
     parser.add_argument('--prompt_csv', help='csv file containing prompts (column "prompt") corresponding to concept to erase',
                         type=str, required=False,
                         default='/home/vnptai/haopd/unlearning/ACE/data/concept_csv/human_20_prompts_2.csv')

@@ -13,7 +13,7 @@ import os
 sys.path.append("/home/vnptai/haopd/unlearning/ACE")
 from utils.figure_grid import merge_images
 from models.merge_ace import load_state_dict
-from models.ace import ACELayer, ACENetwork
+from models.ace import ACELayer, ACENetwork, ACECrossAttnNetwork
 from src.eval.evaluation.eval_util import clip_score, create_meta_json
 from src.eval.evaluation.clip_evaluator import ClipEvaluator
 import train_util
@@ -108,7 +108,7 @@ def flush():
 def generate_images(model_name,
                     prompts_path,
                     save_path,
-                    device='cuda:0',
+                    device='cuda',
                     guidance_scale=7.5,
                     image_size=512,
                     ddim_steps=100,
@@ -204,7 +204,14 @@ def generate_images(model_name,
         else:
             spm_paths = [lora_path]
         used_multipliers = []
-        network = ACENetwork(
+        # Cross-attention-only checkpoints carry the `_attn2` tag in their name and
+        # only store LoRA for attn2 layers, so they must be loaded with the matching
+        # network to keep state_dict keys consistent.
+        is_attn2_only = (lora_name is not None and lora_name.endswith("_attn2")) or any(
+            "_attn2" in str(name) for name in model_name
+        )
+        network_cls = ACECrossAttnNetwork if is_attn2_only else ACENetwork
+        network = network_cls(
             unet,
             rank=lora_rank,
             alpha=1.0,
@@ -281,8 +288,14 @@ def generate_images(model_name,
             case_number = row.case_number
             if is_lora:
                 weighted_spm = dict.fromkeys(spms[0].keys())
+                try:
+                    prompt_row = row.prompt
+                    if str(prompt_row) == "nan":
+                        prompt_row = ""
+                except AttributeError:
+                    prompt_row = ""
                 prompt_embeds, prompt_tokens = train_util.encode_prompts(
-                    tokenizer, text_encoder, [row.prompt], return_tokens=True
+                    tokenizer, text_encoder, [prompt_row], return_tokens=True
                 )
                 if aligned_multipliers is not None:
                     multipliers = torch.tensor(aligned_multipliers).to("cpu", dtype=weight_dtype)
@@ -538,7 +551,7 @@ if __name__ == '__main__':
     parser.add_argument('--model_name', help='name of model', nargs='+', type=str, required=False)
     parser.add_argument('--prompts_path', help='path to csv file with prompts', type=str, required=False)
     parser.add_argument('--save_path', help='folder where to save images', type=str, required=False)
-    parser.add_argument('--device', help='cuda device to run on', type=str, required=False, default='cuda:0')
+    parser.add_argument('--device', help='cuda device to run on', type=str, required=False, default='cuda')
     parser.add_argument('--guidance_scale', help='guidance to run eval', type=float, required=False, default=7.5)
     parser.add_argument('--image_size', help='image size used to train', type=int, required=False, default=512)
     parser.add_argument('--from_case', help='continue generating from case_number', type=int, required=False, default=0)
