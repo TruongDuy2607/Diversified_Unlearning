@@ -2,20 +2,10 @@
 
 # DIVERSIFIED UNLEARNING
 
-## [Conference] A concept is more than a word: Diversified Unlearning in Text-to-Image Diffusion models
+## Unlearn in Context: Contrastive Alignment via Diversified Supervision for Diffusion Models
 
 </div>
 
-## The complete rebuttal
-
-<p align="center">
-	<img src="assets/rebuttal.png" alt="Main figure" style="width:100%;" />
-</p>
-
-
-### Dear Reviewer, kindly refer to the attached [KDD26___Distributional_Unlearning_Rebuttal.pdf](assets/KDD26___Distributional_Unlearning_Rebuttal.pdf) for our complete responses to all your comments.
-
-<br>
 <br>
 
 <p align="center">

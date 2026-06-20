@@ -2,3 +2,4 @@ models
 *.ipynb_checkpoints/
 invest_folder
 evaluation_folder
+.vscode
