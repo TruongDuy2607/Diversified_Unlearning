@@ -8,3 +8,6 @@ transformers==4.48.3
 nudenet==3.0.8
 lpips==0.1.4
 torchmetrics==0.6.0
+matplotlib
+einops
+omegaconf

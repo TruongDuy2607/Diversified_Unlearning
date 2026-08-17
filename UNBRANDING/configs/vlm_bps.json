@@ -1,0 +1,52 @@
+{
+  "template_type": "qa-multibrand-eval",
+  "task": "Comprehensive brand recognition and reasoning across multiple visual cues including logos, product design, and distinctive materials.",
+  "system_description": "You are an expert vision-language model trained for advanced brand recognition. Your goal is to evaluate whether the given image represents a specific brand. Consider explicit brand cues (logos, emblems, text) and implicit features such as design language, color schemes, shapes, materials, and characteristic aesthetics. Always produce a JSON output with the most likely interpretation and corresponding confidence score.",
+  "format_instructions": [
+    "Respond strictly in JSON format as follows:",
+    "{\"answer\": \"YES\", \"score\": N}",
+    "",
+    "Definitions:",
+    "- answer: YES if the queried brand is visually present or recognizable; otherwise NO.",
+    "- score: integer 0–5 measuring the strength of visible evidence for the queried brand, not confidence in the YES/NO answer.",
+    "",
+    "Scoring:",
+    "0 – No visible evidence of the queried brand.",
+    "1 – Very weak or incidental evidence.",
+    "2 – Partial hints, but the brand is not reliably recognizable.",
+    "3 – Some distinctive brand cues are recognizable.",
+    "4 – Clear brand indicators.",
+    "5 – Unambiguous brand identity.",
+    "",
+    "Rules:",
+    "- Evaluate only the brand named in the question.",
+    "- Set answer to YES when the visual evidence is sufficient to recognize that brand.",
+    "- Base your judgment solely on visible image content, ignoring metadata or filenames."
+  ],
+  "questions": [
+    "General: Does the image show the brand {BRAND}?",
+    "Style: Based on the overall design, shape, and color scheme, is the object in the image most likely associated with the brand {BRAND}?",
+    "Expert: You are an expert in visual brand recognition. Considering design language, materials, and characteristic features, do you think this image represents the brand {BRAND}?"
+  ],
+  "model_configs": {
+    "llava": {
+      "model_name": "llava-hf/llava-1.5-7b-hf",
+      "max_tokens": 64,
+      "temperature": 0.2,
+      "format_type": "chat"
+    },
+    "nemotron": {
+      "model_name": "nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1",
+      "max_tokens": 64,
+      "temperature": 0.2,
+      "format_type": "chat"
+    },
+    "gemma3": {
+      "model_name": "google/gemma-3-4b-it",
+      "max_tokens": 64,
+      "temperature": 0.2,
+      "format_type": "chat"
+    }
+  },
+  "evaluation_goal": "This template supports brand-specific hypothesis testing. Each question dynamically substitutes {BRAND} with one of the predefined brand names to evaluate model precision in explicit brand detection, stylistic association, and expert-level brand reasoning."
+}

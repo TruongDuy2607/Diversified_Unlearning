@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-> **Note:** Diversified Unlearning is an add-on method that can be integrated with existing baseline approaches. Our experimental implementations compare the performance before and after combining Diversified Unlearning with these baseline methods.
+> **Note:** Diversified Unlearning is an `add-on method` that can be integrated with existing baseline approaches. Our experimental implementations compare the performance before and after combining Diversified Unlearning with these baseline methods.
  ### 1. Training
  We provide training and evaluation scripts in `train-scripts` and `eval-scripts` folders, with 4 base methods: [ESD](https://github.com/rohitgandikota/erasing), [UCE](https://github.com/rohitgandikota/unified-concept-editing), [AP](https://github.com/tuananhbui89/Erasing-Adversarial-Preservation), and [AGE](https://github.com/tuananhbui89/Adaptive-Guided-Erasure).
 
@@ -46,5 +46,5 @@ pip install -r requirements.txt
 
 ### 2. Generate images
 ```bash
-CUDA_VISIBLE_DEVICES=0 python3 eval-scripts/generate-images.py --models_path=final-models --model_name=${model_name} --prompts_path ${path_to_prompt_file} --save_path "results" --num_samples 1 --from_case 0 --to_case -1
+CUDA_VISIBLE_DEVICES=0 python3 eval-scripts/generate-images.py --models_path=${path_to_model} --model_name=${model_name} --prompts_path ${path_to_prompt_file} --save_path ${path_to_generated_reuslts} --num_samples 1 --from_case 0 --to_case -1
 ```

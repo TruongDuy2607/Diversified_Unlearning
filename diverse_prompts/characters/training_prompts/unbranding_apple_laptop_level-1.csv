@@ -1,0 +1,21 @@
+id,prompt,keyword,target_prompt,context
+1,A photo of the apple laptop on a table,apple laptop,A photo of the gaming laptop on a table,on a table
+2,A photo of the apple laptop on a desk,apple laptop,A photo of the gaming laptop on a desk,on a desk
+3,A photo of the apple laptop beside a window,apple laptop,A photo of the gaming laptop beside a window,beside a window
+4,A photo of the apple laptop in an office,apple laptop,A photo of the gaming laptop in an office,in an office
+5,A photo of the apple laptop in a classroom,apple laptop,A photo of the gaming laptop in a classroom,in a classroom
+6,A photo of the apple laptop in a cafe,apple laptop,A photo of the gaming laptop in a cafe,in a cafe
+7,A photo of the apple laptop with a book,apple laptop,A photo of the gaming laptop with a book,with a book
+8,A photo of the apple laptop with a mouse,apple laptop,A photo of the gaming laptop with a mouse,with a mouse
+9,A photo of the apple laptop with headphones,apple laptop,A photo of the gaming laptop with headphones,with headphones
+10,A photo of the apple laptop with a coffee cup,apple laptop,A photo of the gaming laptop with a coffee cup,with a coffee cup
+11,A photo of the silver apple laptop on a table,apple laptop,A photo of the silver gaming laptop on a table,silver on a table
+12,A photo of the silver apple laptop with a book,apple laptop,A photo of the silver gaming laptop with a book,silver with a book
+13,A photo of the open apple laptop on a desk,apple laptop,A photo of the open gaming laptop on a desk,open on a desk
+14,A photo of the closed apple laptop on a table,apple laptop,A photo of the closed gaming laptop on a table,closed on a table
+15,A photo of the apple laptop viewed from the front,apple laptop,A photo of the gaming laptop viewed from the front,viewed from the front
+16,A photo of the apple laptop viewed from the side,apple laptop,A photo of the gaming laptop viewed from the side,viewed from the side
+17,A photo of the apple laptop under warm light,apple laptop,A photo of the gaming laptop under warm light,under warm light
+18,A photo of the apple laptop under studio lighting,apple laptop,A photo of the gaming laptop under studio lighting,under studio lighting
+19,A photo of the apple laptop in a backpack,apple laptop,A photo of the gaming laptop in a backpack,in a backpack
+20,A photo of the apple laptop held by a student,apple laptop,A photo of the gaming laptop held by a student,held by a student

@@ -105,7 +105,7 @@ def get_models(config_path, ckpt_path, devices):
 
     return model_orig, sampler_orig, model, sampler
 
-def train_esd(prompt, train_method, start_guidance, negative_guidance, iterations, lr, config_path, ckpt_path, diffusers_config_path, devices, seperator=None, image_size=512, ddim_steps=50, info=''):
+def train_esd(prompt, train_method, start_guidance, negative_guidance, iterations, lr, config_path, ckpt_path, diffusers_config_path, devices, target_prompt='', seperator=None, image_size=512, ddim_steps=50, info=''):
     '''
     Function to train diffusion models to erase concepts from model weights
 
@@ -113,6 +113,8 @@ def train_esd(prompt, train_method, start_guidance, negative_guidance, iteration
     ----------
     prompt : str
         The concept to erase from diffusion model (Eg: "Van Gogh").
+    target_prompt : str, optional
+        The concept to map the erased concept toward. The default is an empty prompt.
     train_method : str
         The parameters to train for erasure (ESD-x, ESD-u, full, selfattn).
     start_guidance : float
@@ -152,7 +154,8 @@ def train_esd(prompt, train_method, start_guidance, negative_guidance, iteration
         words = [word.strip() for word in words]
     else:
         words = [prompt]
-    print(words)
+    print('to be erased:', words)
+    print('target prompt:', target_prompt or '<empty>')
     ddim_eta = 0
     # MODEL TRAINING SETUP
 
@@ -214,8 +217,8 @@ def train_esd(prompt, train_method, start_guidance, negative_guidance, iteration
     pbar = tqdm(range(iterations))
     for i in pbar:
         word = random.sample(words,1)[0]
-        # get text embeddings for unconditional and conditional prompts
-        emb_0 = model.get_learned_conditioning([''])
+        # get text embeddings for target and erased prompts
+        emb_target = model.get_learned_conditioning([target_prompt])
         emb_p = model.get_learned_conditioning([word])
         emb_n = model.get_learned_conditioning([f'{word}'])
 
@@ -232,17 +235,17 @@ def train_esd(prompt, train_method, start_guidance, negative_guidance, iteration
 
         with torch.no_grad():
             # generate an image with the concept from ESD model
-            z = quick_sample_till_t(emb_p.to(devices[0]), start_guidance, start_code, int(t_enc)) # emb_p seems to work better instead of emb_0
-            # get conditional and unconditional scores from frozen model at time step t and image z
-            e_0 = model_orig.apply_model(z.to(devices[1]), t_enc_ddpm.to(devices[1]), emb_0.to(devices[1]))
+            z = quick_sample_till_t(emb_p.to(devices[0]), start_guidance, start_code, int(t_enc))
+            # get target and erased scores from frozen model at time step t and image z
+            e_target = model_orig.apply_model(z.to(devices[1]), t_enc_ddpm.to(devices[1]), emb_target.to(devices[1]))
             e_p = model_orig.apply_model(z.to(devices[1]), t_enc_ddpm.to(devices[1]), emb_p.to(devices[1]))
         # breakpoint()
         # get conditional score from ESD model
         e_n = model.apply_model(z.to(devices[0]), t_enc_ddpm.to(devices[0]), emb_n.to(devices[0]))
-        e_0.requires_grad = False
+        e_target.requires_grad = False
         e_p.requires_grad = False
         # reconstruction loss for ESD objective from frozen model and conditional score of ESD model
-        loss = criteria(e_n.to(devices[0]), e_0.to(devices[0]) - (negative_guidance*(e_p.to(devices[0]) - e_0.to(devices[0])))) #loss = criteria(e_n, e_0) works the best try 5000 epochs
+        loss = criteria(e_n.to(devices[0]), e_target.to(devices[0]) - (negative_guidance * (e_p.to(devices[0]) - e_target.to(devices[0]))))
         # update weights to erase the concept
         loss.backward()
         losses.append(loss.item())
@@ -291,6 +294,7 @@ if __name__ == '__main__':
                     prog = 'TrainESD',
                     description = 'Finetuning stable diffusion model to erase concepts using ESD method')
     parser.add_argument('--prompt', help='prompt corresponding to concept to erase', type=str, required=True)
+    parser.add_argument('--target_prompt', help='prompt to map the erased concept toward', type=str, required=False, default='')
     parser.add_argument('--train_method', help='method of training', type=str, required=True)
     parser.add_argument('--start_guidance', help='guidance of start image used to train', type=float, required=False, default=3)
     parser.add_argument('--negative_guidance', help='guidance of negative training used to train', type=float, required=False, default=1)
@@ -308,6 +312,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     prompt = args.prompt
+    target_prompt = args.target_prompt
     train_method = args.train_method
     start_guidance = args.start_guidance
     negative_guidance = args.negative_guidance
@@ -321,4 +326,4 @@ if __name__ == '__main__':
     image_size = args.image_size
     ddim_steps = args.ddim_steps
 
-    train_esd(prompt=prompt, train_method=train_method, start_guidance=start_guidance, negative_guidance=negative_guidance, iterations=iterations, lr=lr, config_path=config_path, ckpt_path=ckpt_path, diffusers_config_path=diffusers_config_path, devices=devices, seperator=seperator, image_size=image_size, ddim_steps=ddim_steps, info=args.info)
+    train_esd(prompt=prompt, target_prompt=target_prompt, train_method=train_method, start_guidance=start_guidance, negative_guidance=negative_guidance, iterations=iterations, lr=lr, config_path=config_path, ckpt_path=ckpt_path, diffusers_config_path=diffusers_config_path, devices=devices, seperator=seperator, image_size=image_size, ddim_steps=ddim_steps, info=args.info)
